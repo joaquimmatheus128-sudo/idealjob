@@ -1,0 +1,123 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.site-header {
+    min-height: 97px;
+    background: #ff671b;
+    border-bottom: 4px solid #009fe3;
+}
+
+.top-menu {
+    width: min(842px, calc(100% - 40px));
+    min-height: 93px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brand {
+    display: inline-flex;
+    align-items: flex-end;
+    color: #fff;
+    font-size: 29px;
+    font-weight: 700;
+    line-height: .78;
+    letter-spacing: -1.5px;
+    text-decoration: none;
+}
+
+.brand-fish {
+    width: 43px;
+    height: 20px;
+    margin: 0 0 -2px -2px;
+    fill: none;
+    stroke: #fff;
+    stroke-width: 1.4;
+    stroke-linejoin: round;
+}
+
+.menu-links,
+.social-links {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.menu-links {
+    gap: clamp(28px, 6.7vw, 76px);
+}
+
+.menu-links a {
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.menu-links a:hover,
+.menu-links a:focus-visible {
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+
+.social-links {
+    gap: 32px;
+}
+
+.social-links a,
+.social-links img {
+    display: block;
+    width: 29px;
+    height: 29px;
+}
+
+.social-links img {
+    filter: invert(37%) sepia(98%) saturate(1570%) hue-rotate(164deg) brightness(95%) contrast(101%);
+}
+
+@media (max-width: 680px) {
+    .top-menu {
+        width: calc(100% - 28px);
+        min-height: 84px;
+        gap: 16px;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 14px 0;
+    }
+
+    .site-header {
+        min-height: 88px;
+    }
+
+    .brand {
+        margin-right: auto;
+        font-size: 25px;
+    }
+
+    .menu-links {
+        order: 3;
+        width: 100%;
+        justify-content: space-between;
+        gap: 12px;
+    }
+
+    .menu-links a {
+        font-size: 14px;
+    }
+
+    .social-links {
+        gap: 16px;
+    }
+}
